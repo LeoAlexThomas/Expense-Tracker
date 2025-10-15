@@ -123,6 +123,14 @@ const createRecord = () => {
     }
     return acc;
   }, 0);
+  if (records.length === 0) {
+    recordList.innerHTML += `
+    <div class="mx-auto h-full flex items-center justify-center" >
+    <p class="text-lg text-center">Add expense / income to show them here</p>
+    </div>
+    `;
+    return;
+  }
   records
     .filter((ele) => {
       if (filterAllRadio.checked) {
@@ -137,13 +145,13 @@ const createRecord = () => {
       return (recordList.innerHTML += `
         <div id='record-${index}' class="flex flex-col sm:flex-row justify-between items-center border my-4 rounded-md p-4" >
             <div class="flex-1 self-stretch" >
-                <div class="flex gap-4" >
+                <div class="flex gap-4 justify-between sm:justify-start" >
                     <h4 class="text-xl font-semibold " >${ele.title}</h4>
                     <div class="${
                       ele.type.toLowerCase() === "income"
                         ? "bg-green-100"
                         : "bg-red-100"
-                    } rounded-xl text-sm font-medium py-1 px-3" >${
+                    } self-center rounded-xl text-sm font-medium py-1 px-3" >${
         ele.type
       }</div>
                 </div>
