@@ -101,6 +101,7 @@ const updateRecord = () => {
 
 // Based on records creating Record Cards and updating balance text
 const createRecord = () => {
+  console.log("Records: ", records);
   recordList.innerHTML = "";
   // Updating balance text
   totalIncome.innerText = records.reduce(function (acc, cv) {
