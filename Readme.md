@@ -13,7 +13,7 @@ A simple and efficient expense tracking application to help you manage your fina
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/expense-tracker.git
+   git clone https://github.com/LeoAlexThomas/Expense-Tracker.git
    ```
 2. **Open the project folder and launch `index.html` in your browser.**
 
